@@ -77,8 +77,7 @@ class SearchProductsActivity : BaseActivity() {
                 mProductPrice = record.minimumListPrice.toString(),
                 mProductDiscount = record.promoPrice.toString()
             )
-        }
-
+        }?.let(mAdapter::update)
     }
 
     private fun configureErrorView() {
