@@ -15,4 +15,5 @@
     <string name="text_search">search</string>
     <string name="text_not_results">Not Result</string>
     <string name="product_description_image">product poster item</string>
+    <string name="empty_string"> </string>
 </resources>

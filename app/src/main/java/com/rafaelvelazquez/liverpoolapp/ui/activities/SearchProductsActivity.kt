@@ -20,7 +20,6 @@ import com.rafaelvelazquez.liverpoolapp.ui.views.ItemGridProducts
 
 class SearchProductsActivity : BaseActivity() {
 
-
     private val searchProductsViewModel: SearchProductsViewModel by viewModel {
         injector.searchProductsViewModel
     }
@@ -34,6 +33,10 @@ class SearchProductsActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        title = resources.getString(R.string.empty_string)
+        searchProductsViewModel.getAllProducts(
+            resources.getString(R.string.empty_string),
+            1)
         setupRecyclerView()
         bindViewModel()
     }
