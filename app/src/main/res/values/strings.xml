@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">LiverpoolApp</string>
+    <string name="progress_text">Loading</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="remember_user">Recordar usuario</string>
+    <string name="text_default">Default Price</string>
+    <string name="text_lowerPrice">Lower Price</string>
+    <string name="text_higherPrice">Higher Price</string>
+    <string name="text_search">search</string>
+    <string name="text_not_results">Not Result</string>
+    <string name="product_description_image">product poster item</string>
+</resources>

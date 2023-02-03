@@ -1,0 +1,84 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+
+android {
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    namespace 'com.rafaelvelazquez.liverpoolapp'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.rafaelvelazquez.liverpoolapp"
+        minSdk 29
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation project(":data")
+    implementation project(":domain")
+    implementation project(':usecases')
+    implementation project(":framework:imagemanager")
+    implementation project(":framework:requestmanager")
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.constraintLayout)
+
+    // Dagger
+    implementation(libs.dagger)
+    implementation(libs.dagger.android)
+    kapt(libs.dagger.compiler)
+    kapt(libs.dagger.android.compiler)
+
+    // Gson
+    implementation(libs.gson)
+    implementation(libs.retrofit.converter.gson)
+
+    // Rx
+    implementation(libs.rx.java)
+    implementation(libs.rx.android)
+
+    implementation(libs.retrofit.adapter.rxjava)
+
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+
+    // Test
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.test.ext)
+    androidTestImplementation(libs.androidx.test.espresso)
+
+    // groupie
+    implementation(libs.groupie)
+    implementation(libs.groupie.viewbinding)
+
+}
